@@ -1,0 +1,44 @@
+name: "Stability Incident"
+description: "Message routing/connection stability incident or anomaly"
+title: "[stability] "
+labels: ["track-stability"]
+body:
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      options:
+        - P1 (outage/data loss)
+        - P2 (degraded)
+        - P3 (minor)
+    validations:
+      required: true
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What happened?
+    validations:
+      required: true
+  - type: textarea
+    id: timeline
+    attributes:
+      label: Timeline
+      description: Key timestamps (KST)
+      placeholder: |
+        - 2026-02-14T21:00:00+09:00 ...
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impact
+      description: What users/flows were affected? Any message loss?
+  - type: textarea
+    id: logs
+    attributes:
+      label: Evidence / Logs
+      description: Links to logs, screenshots, request IDs
+  - type: textarea
+    id: fix
+    attributes:
+      label: Fix / Next steps
+      description: What we will do now

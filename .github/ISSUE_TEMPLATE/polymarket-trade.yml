@@ -1,0 +1,52 @@
+name: "Polymarket Trade Log"
+description: "Record a trade + quick review (mirrors logs/polymarket_trades.csv)"
+title: "[polymarket] "
+labels: ["track-polymarket"]
+body:
+  - type: input
+    id: ts
+    attributes:
+      label: ts (KST ISO-8601)
+      placeholder: "2026-02-14T21:30:00+09:00"
+    validations:
+      required: true
+  - type: input
+    id: event
+    attributes:
+      label: event (title or URL)
+    validations:
+      required: true
+  - type: dropdown
+    id: side
+    attributes:
+      label: side
+      options: ["YES", "NO"]
+    validations:
+      required: true
+  - type: input
+    id: price
+    attributes:
+      label: entry price
+  - type: input
+    id: shares
+    attributes:
+      label: shares
+  - type: textarea
+    id: entry_reason
+    attributes:
+      label: entry_reason
+      description: 1-2 sentences
+    validations:
+      required: true
+  - type: textarea
+    id: exit_reason
+    attributes:
+      label: exit_reason
+  - type: input
+    id: pnl
+    attributes:
+      label: pnl ($)
+  - type: textarea
+    id: notes
+    attributes:
+      label: notes

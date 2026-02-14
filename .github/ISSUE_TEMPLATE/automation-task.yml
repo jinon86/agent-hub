@@ -1,0 +1,34 @@
+name: "Automation Task"
+description: "Automation backlog item"
+title: "[automation] "
+labels: ["track-automation"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What repeated work are we trying to eliminate?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal
+      description: Proposed automation approach
+    validations:
+      required: true
+  - type: input
+    id: success
+    attributes:
+      label: Success metric
+      placeholder: "e.g., saves 30 min/day"
+  - type: dropdown
+    id: effort
+    attributes:
+      label: Effort
+      options: ["S", "M", "L"]
+  - type: dropdown
+    id: impact
+    attributes:
+      label: Impact
+      options: ["Low", "Medium", "High"]
