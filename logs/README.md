@@ -21,3 +21,23 @@
 ## 커밋 규칙(권장)
 - 하루 1회 배치 커밋 또는 트레이드 단위 커밋
 - 커밋 메시지 예: `logs: add polymarket trade 2026-02-14`
+
+## 채팅 입력 템플릿(트레이드 1건)
+아래를 채팅에 그대로 붙여넣어 작성 후 공유합니다(1건=1행).
+
+- ts: 2026-02-14T21:30:00+09:00
+- event: <마켓 제목 또는 URL>
+- side: YES|NO
+- price: <entry avg price>
+- shares: <qty>
+- prob: <optional>
+- entry_reason: <1-2문장>
+- exit_reason: <optional>
+- stop_rule: per-trade $20 cap; daily $10 loss cap
+- pnl: <optional>
+- fees: <optional>
+- notes: <optional>
+- source_link: <optional>
+
+### CSV 매핑
+- 위 항목을 `logs/polymarket_trades.csv` 헤더 순서에 맞춰 1행으로 기록합니다.
